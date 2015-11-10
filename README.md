@@ -10,7 +10,7 @@ Clone a copy of the repo into your home folder.
 
 ```
 cd ~
-git clone https://github.com/bwmarrin/dotfiles.git
+git clone https://github.com/siacn/dotfiles.git
 ```
 
 Now link the dotfiles into your home folder.
