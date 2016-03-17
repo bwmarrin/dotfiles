@@ -34,9 +34,12 @@ map <leader>s :source ~/.vimrc<CR>
 
 " short cuts for buffers
 map <leader>b :ls<CR>:b 
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprev<CR>
-nnoremap <C-d> :bdelete<CR>
+map <leader>n :enew<CR>
+map <leader>h :bprev<CR>
+map <leader>j :blast<CR>
+map <leader>k :bfirst<CR>
+map <leader>l :bnext<CR>
+map <leader>d :bdelete<CR>
 
 
 "============================================================================
@@ -79,7 +82,6 @@ autocmd BufReadPost *
 
 " re-indent file while retaining cursor position.
 nnoremap <leader>= mzgg=G`z
-
 
 
 "============================================================================
