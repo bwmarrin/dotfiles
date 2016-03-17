@@ -1,3 +1,6 @@
+" needs a category, but also needs to be up top, apparently.
+let mapleader=" "
+
 "=============================================================================
 " Appearance
 "-----------------------------------------------------------------------------
@@ -10,8 +13,8 @@ set colorcolumn=81
 "============================================================================
 " Searching
 "-----------------------------------------------------------------------------
-set incsearch                  " do incremental searching
-set ignorecase smartcase
+set incsearch               " Incremental Searching 
+set ignorecase smartcase    " Ignore case when all lowercase
 
 
 "============================================================================
@@ -50,7 +53,6 @@ set expandtab
 " stuff I haven't made a category for..
 "-----------------------------------------------------------------------------
 filetype plugin indent on
-let mapleader=" "
 set hidden
 set visualbell
 
