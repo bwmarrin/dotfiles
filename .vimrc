@@ -1,88 +1,69 @@
-
 "=============================================================================
-" General Settings
+" Appearance
 "-----------------------------------------------------------------------------
+syntax on
+set number relativenumber
+set background=dark
+set colorcolumn=81
 
-set nocompatible               " turn off vi compatibility - must be first.
-set undolevels=1000            " lots and lots of undo!
-set history=50                 " size of :command history
-set backspace=indent,eol,start " allow backspacing over everything
-set backup		               " keep a backup file
-set history=50                 " keep 50 lines of command line history
-set ruler                      " show the cursor position all the time
-set showcmd	                   " display incomplete commands
+
+"============================================================================
+" Searching
+"-----------------------------------------------------------------------------
 set incsearch                  " do incremental searching
+set ignorecase smartcase
 
 
-"=============================================================================
-" Colors
+"============================================================================
+" Switch between splits
+"----------------------------------------------------------------------------
+nnoremap <silent> <C-h> <C-w><C-h>
+nnoremap <silent> <C-j> <C-w><C-j>
+nnoremap <silent> <C-k> <C-w><C-k>
+nnoremap <silent> <C-l> <C-w><C-l>
+
+
+"============================================================================
+" Aliases
 "-----------------------------------------------------------------------------
+" reload vimrc file
+map <leader>s :source ~/.vimrc<CR>
+
+" short cuts for buffers
+map <leader>b :ls<CR>:b 
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
+nnoremap <C-d> :bdelete<CR>
 
 
-
-"=============================================================================
-" Presentation
+"============================================================================
+" Indenting / Wrapping
 "-----------------------------------------------------------------------------
-set shortmess=aIoO             " really short messages, don't show intro?
-set showmode                   " show the current input mode
-set more                       " page on extended ouptput?
-set visualbell                 " turn on visual bell
-set noerrorbells               " turn off that damn ding.
-set noequalalways              " don't always keep windows at equal sizes?
-set splitbelow                 " splitted window appears below current one
-
-"=============================================================================
-" Statusline, Ruler
-"-----------------------------------------------------------------------------
-set laststatus=2               " alwasy put a status line
-
-"=============================================================================
-" Tab standards
-"-----------------------------------------------------------------------------
-set softtabstop=4
+set nowrap
+set tabstop=4
 set shiftwidth=4
 set shiftround
-set expandtab                  " expand tabs to spaces? Maybe..
+set expandtab
 
 
-"=============================================================================
-" Colors
-"-----------------------------------------------------------------------------
-
-
-
-
-
-"=============================================================================
-" Other stuff
+"============================================================================
+" stuff I haven't made a category for..
 "-----------------------------------------------------------------------------
 filetype plugin indent on
+let mapleader=" "
+set hidden
+set visualbell
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+"eliminate delay on ESC
+set timeoutlen=1000
+set ttimeoutlen=10
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
+" enable mouse
+set mouse=a
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+set showcmd	                   " display incomplete commands
+set splitright
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-au!
-
-" For all text files set 'textwidth' to 78 characters.
-autocmd FileType text setlocal textwidth=78
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -90,33 +71,20 @@ autocmd FileType text setlocal textwidth=78
 " Also don't do it when the mark is in the first line, that is the default
 " position when opening a file.
 autocmd BufReadPost *
-  \ if line("'\"") > 1 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
+            \ if line("'\"") > 1 && line("'\"") <= line("$") |
+            \   exe "normal! g`\"" |
+            \ endif
 
 augroup END
 
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
+" re-indent file while retaining cursor position.
+nnoremap <leader>= mzgg=G`z
 
 
 
-set autoindent
-set nowrap
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set background=dark
-let g:PHP_vintage_case_default_indent = 1
-
-set colorcolumn=80
-autocmd BufRead,BufNewFile *.md setlocal spell
-set complete+=kspell
-hi clear SpellBad
-hi SpellBad cterm=underline
-
+"============================================================================
+" This loads my extended .vim/vimrc.vom file for plugins
+" It is optional and will only load if exists so I can have my basic
+" settings on systems where I don't need to install all my plugins.
+"-----------------------------------------------------------------------------
+runtime vimrc.vim
