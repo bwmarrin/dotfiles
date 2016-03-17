@@ -75,8 +75,6 @@ autocmd BufReadPost *
             \   exe "normal! g`\"" |
             \ endif
 
-augroup END
-
 " re-indent file while retaining cursor position.
 nnoremap <leader>= mzgg=G`z
 
