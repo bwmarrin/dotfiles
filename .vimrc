@@ -52,12 +52,17 @@ set shiftround
 set expandtab
 
 
+
+
+
+
 "============================================================================
 " stuff I haven't made a category for..
 "-----------------------------------------------------------------------------
 filetype plugin indent on
 set hidden
 set visualbell
+set laststatus=2               " alwasy put a status line
 
 "eliminate delay on ESC
 set timeoutlen=1000

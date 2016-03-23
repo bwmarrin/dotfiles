@@ -46,8 +46,6 @@ esac
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
-alias ls='ls -G'
-
 bindkey "\e[3~"   delete-char              # xterm
 bindkey "\e[1~"   beginning-of-line        # xterm
 bindkey "\e[4~"   end-of-line              # xterm
