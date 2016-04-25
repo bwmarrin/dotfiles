@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule ".vim/bundle/VimCompletesMe"]
+	path = .vim/bundle/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe.git
