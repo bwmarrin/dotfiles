@@ -88,6 +88,7 @@ autocmd BufReadPost *
 " re-indent file while retaining cursor position.
 nnoremap <leader>= mzgg=G`z
 
+colorscheme slate
 
 "============================================================================
 " This loads my extended .vim/vimrc.vom file for plugins

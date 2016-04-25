@@ -8,7 +8,7 @@ execute pathogen#helptags()
 "=============================================================================
 " Colorscheme
 "-----------------------------------------------------------------------------
-colorscheme monokai
+"colorscheme monokai
 
 
 "=============================================================================
@@ -44,7 +44,7 @@ let g:go_highlight_build_constraints = 1
 " Go Go Performance?
 set ttyfast
 set lazyredraw
-set re=1
+"set re=1 " does not work with vim 7.3, re-eval.
 
 
 "=============================================================================
