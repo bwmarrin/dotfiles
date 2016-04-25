@@ -91,7 +91,7 @@ nnoremap <leader>= mzgg=G`z
 colorscheme slate
 
 "============================================================================
-" This loads my extended .vim/vimrc.vom file for plugins
+" This loads my extended .vim/vimrc.vim file for plugins
 " It is optional and will only load if exists so I can have my basic
 " settings on systems where I don't need to install all my plugins.
 "-----------------------------------------------------------------------------
