@@ -50,3 +50,6 @@ set lazyredraw
 "=============================================================================
 " VimCompletesMe Plugin
 "-----------------------------------------------------------------------------
+
+" autocomplete spelling for markdown
+autocmd FileType text,markdown let b:vcm_tab_complete = 'dict'
