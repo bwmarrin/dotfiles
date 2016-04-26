@@ -30,7 +30,7 @@ let g:airline_theme="molokai"
 au FileType go nmap <leader>gr :w<CR><Plug>(go-run)
 au FileType go nmap <leader>gb :w<CR><Plug>(go-build)
 au FileType go nmap <leader>gt :w<CR><Plug>(go-test)
-au FileType go nmap <leader>gc :w<CR><Plug>(go-coverage)
+au FileType go nmap <leader>gc :w<CR><Plug>(go-coverage-toggle)
 au FileType go nmap <leader>gi <Plug>(go-import) 
 
 let g:go_fmt_command = "goimports"
