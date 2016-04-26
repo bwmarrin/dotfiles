@@ -33,6 +33,7 @@ au FileType go nmap <leader>gt :w<CR><Plug>(go-test)
 au FileType go nmap <leader>gc :w<CR><Plug>(go-coverage)
 au FileType go nmap <leader>gi <Plug>(go-import) 
 
+let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
