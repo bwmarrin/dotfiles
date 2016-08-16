@@ -63,6 +63,7 @@ filetype plugin indent on
 set hidden
 set visualbell
 set laststatus=2               " alwasy put a status line
+set backspace=indent,eol,start
 
 "eliminate delay on ESC
 set timeoutlen=1000
