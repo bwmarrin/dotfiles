@@ -46,11 +46,15 @@ esac
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
-alias ls='ls -G'
+#alias ls='ls -G'
+## -G isn't color on linux..
 
 bindkey "\e[3~"   delete-char              # xterm
 bindkey "\e[1~"   beginning-of-line        # xterm
 bindkey "\e[4~"   end-of-line              # xterm
 
 export GOPATH=$HOME/.go
+export GOROOT=$GOPATH/root
 export PATH=$PATH:$GOPATH/bin
+export EDITOR=vim
+export VISUAL=vim
