@@ -46,13 +46,11 @@ esac
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
-case `uname` in
-    Darwin)
-        ;;
-    Linux)
+case "$OSTYPE" in
+    linux*)
         alias ls='ls --color'
         ;;
-    FreeBSD)
+    freebsd*)
         alias ls='ls -G'
         ;;
 esac
