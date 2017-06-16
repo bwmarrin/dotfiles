@@ -46,8 +46,16 @@ esac
 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
-#alias ls='ls -G'
-## -G isn't color on linux..
+case `uname` in
+    Darwin)
+        ;;
+    Linux)
+        alias ls='ls --color'
+        ;;
+    FreeBSD)
+        alias ls='ls -G'
+        ;;
+esac
 
 bindkey "\e[3~"   delete-char              # xterm
 bindkey "\e[1~"   beginning-of-line        # xterm
