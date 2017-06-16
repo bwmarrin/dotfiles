@@ -48,10 +48,12 @@ export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
 case "$OSTYPE" in
     linux*)
-        alias ls='ls --color'
+        alias ls='ls --color -F'
+        alias ll='ls --color -Fahl'
         ;;
     freebsd*)
-        alias ls='ls -G'
+        alias ls='ls -GF'
+        alias ll='ls -GFahl'
         ;;
 esac
 
