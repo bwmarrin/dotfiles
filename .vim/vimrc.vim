@@ -27,6 +27,10 @@ let g:airline_theme="molokai"
 "=============================================================================
 " vim-go Plugin
 "-----------------------------------------------------------------------------
+
+" sadly, I'm not on the latest vim version everywhere.
+let g:go_version_warning = 0
+
 au FileType go nmap <leader>gr :w<CR><Plug>(go-run)
 au FileType go nmap <leader>gb :w<CR><Plug>(go-build)
 au FileType go nmap <leader>gt :w<CR><Plug>(go-test)
