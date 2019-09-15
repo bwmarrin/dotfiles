@@ -97,3 +97,8 @@ colorscheme slate
 " settings on systems where I don't need to install all my plugins.
 "-----------------------------------------------------------------------------
 runtime vimrc.vim
+"============================================================================
+" This loads my local .vim/vimrc.vim file for extra settings on specific
+" machines. It is optional and will only load if exists.
+"-----------------------------------------------------------------------------
+runtime vimrc-local.vim
