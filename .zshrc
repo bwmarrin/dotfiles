@@ -60,6 +60,10 @@ esac
 bindkey "\e[3~"   delete-char              # xterm
 bindkey "\e[1~"   beginning-of-line        # xterm
 bindkey "\e[4~"   end-of-line              # xterm
+bindkey "\e[[H"   beginning-of-line
+
+bindkey "^[[H"   beginning-of-line   # HOME key
+bindkey "^[[F"   end-of-line         # END key    
 
 export GOPATH=$HOME/.go
 export GOROOT=$GOPATH/root
